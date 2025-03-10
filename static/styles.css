@@ -17,3 +17,28 @@ body {
 .title {
     font-size: 50px;
 }
+
+.sel_box {
+    border: 2px solid black;
+}
+
+.tutor_button {
+    font-size: 35px;
+    margin-left: 400px;
+    margin-top: 350px;
+    padding: 30px 60px;
+    justify-items: center;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.tutor_button:hover {
+    scale: 1.1;
+    background-color: gray;
+}
+
+.student_button {
+    background-color: saddlebrown;
+    margin-right: -400px;
+    margin-top: 350px;
+}
