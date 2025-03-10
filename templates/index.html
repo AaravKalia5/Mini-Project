@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block pageheading %}
+
+{% endblock %}
+
+{% block main %}
+    <div class="header">
+        <div class="title_box"><h1 class="title">Book Your Class NOW!</h1></div>
+    </div>
+
+    <div class="main">
+        <div class="sel_box">
+            <button class="tutor_button"><a href="sel.html">Tutor</a></button>
+        </div>
+    </div>
+{% endblock %}

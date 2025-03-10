@@ -1,0 +1,19 @@
+body {
+    font-family: Ubuntu;
+}
+
+.title_box {
+    align-items: center;
+    justify-items: center;
+    padding: 20px;
+    background-color: aquamarine;
+}
+
+.header {
+    border-bottom: 2px solid black;
+
+}
+
+.title {
+    font-size: 50px;
+}
