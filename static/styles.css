@@ -1,5 +1,8 @@
 body {
     font-family: Ubuntu;
+    background-image: url("/static/images/DJI_0050Web.jpg");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
 }
 
 .title_box {
@@ -20,7 +23,6 @@ body {
 }
 
 .sel_box {
-    border: 2px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,7 +37,6 @@ body {
     border: none;
     cursor: pointer;
     text-decoration: none;
-    transition: transform 0.2s ease-in-out;
 }
 
 .tutor_button:hover, .student_button:hover {
