@@ -6,12 +6,13 @@ body {
     align-items: center;
     justify-items: center;
     padding: 20px;
+    margin: 0;
     background-color: aquamarine;
 }
 
 .header {
     border-bottom: 2px solid black;
-
+    background-color: aquamarine;
 }
 
 .title {
@@ -20,25 +21,43 @@ body {
 
 .sel_box {
     border: 2px solid black;
-}
-
-.tutor_button {
-    font-size: 35px;
-    margin-left: 400px;
-    margin-top: 350px;
-    padding: 30px 60px;
-    justify-items: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    border-radius: 30px;
+    height: 60vh;
+    gap: 30px;
 }
 
-.tutor_button:hover {
+.tutor_button, .student_button {
+    font-size: 35px;
+    padding: 20px 50px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+.tutor_button:hover, .student_button:hover {
     scale: 1.1;
     background-color: gray;
 }
 
-.student_button {
-    background-color: saddlebrown;
-    margin-right: -400px;
-    margin-top: 350px;
+.student_button a, .tutor_button a{
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }

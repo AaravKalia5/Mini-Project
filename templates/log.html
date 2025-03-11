@@ -1,20 +1,11 @@
 {% extends 'base.html' %}
 
 {% block pageheading %}
-    <h1>Sign Up</h1>
+    <h1>Login</h1>
 {% endblock %}
 
 {% block main %}
     <form class="form" method="post">
-        <div class="form_group">
-            <div class="form_label">First Name: </div>
-            <div class="form_element"><input type="text" name="user_fname" required></div>
-        </div>
-
-        <div class="form_group">
-            <div class="form_label">Last Name: </div>
-            <div class="form_element"><input type="text" name="user_lname" required></div>
-        </div>
 
         <div class="form_group">
             <div class="form_label">Email: </div>
@@ -24,11 +15,6 @@
         <div class="form_group">
             <div class="form_label">Password: </div>
             <div class="form_element"><input type="password" name="password" required></div>
-        </div>
-
-        <div class="form_group">
-            <div class="form_label">Password2: </div>
-            <div class="form_element"><input type="password" name="password2" required></div>
         </div>
 
         <div class="form_group">
