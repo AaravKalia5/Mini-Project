@@ -1,10 +1,11 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, session
 import sqlite3
 from sqlite3 import Error
 
 app = Flask(__name__)
 
 DATABASE = "user"
+app.secret_key = 'secret_key'
 
 
 def connect_database(db_file):
@@ -46,17 +47,36 @@ def render_selection_page():  # put application's code here
 
         return redirect("/book")
 
-
     return render_template("sel.html")
 
 
 @app.route('/log', methods=['POST', 'GET'])
 def render_login_page():  # put application's code here
+    if request.method == 'POST':
+        email = request.form['email'].strip().lower()
+        password = request.form['password']
+
+        query = "SELECT user_id, first_name, password FROM user WHERE email = ?"
+        con = connect_database(DATABASE)
+        cur = con.cursor()
+        cur.execute(query, (email,))
+        user_info = cur.fetchone()
+        con.close()
+        print(user_info)
+
+        session['user_id'] = user_info[0]
+        session['email'] = user_info[1]
+
+        if email == email and password == password:
+
+
     return render_template("log.html")
+
 
 @app.route('/book')
 def render_book_page():  # put application's code here
     return render_template("book.html")
+
 
 if __name__ == '__main__':
     app.run()
