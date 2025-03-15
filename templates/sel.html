@@ -32,8 +32,20 @@
         </div>
 
         <div class="form_group">
+            <div class="form_label">I am a...</div>
+            <div class="form_element">
+                <select name="role" required>
+                    <option value="Student">Student</option>
+                    <option value="Tutor">Tutor</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form_group">
             <div class="form_label">Submit: </div>
             <div class="form_element"><input type="submit" name="signup" required></div>
         </div>
+
+
     </form>
 {% endblock %}

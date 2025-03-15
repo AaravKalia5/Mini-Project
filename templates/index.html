@@ -4,14 +4,27 @@
 {% endblock %}
 
 {% block main %}
-    <div class="header">
-        <div class="title_box"><h1 class="title">Book Your Class NOW!</h1></div>
-    </div>
+    {% if book %}
+        <table>
+            <tr>
+                <th>Tutor</th>
+                <th>Subject</th>
+                <th>Location</th>
+                <th>Time</th>
+            </tr>
 
-    <div class="main">
-        <div class="sel_box">
-            <button class="tutor_button"><a href="/sel">Sign Up</a></button>
-            <button class="student_button"><a href="/log">Login</a></button>
-        </div>
-    </div>
+            {% for booking in book %}
+                <tr>
+                    <td>{{ booking[1] }}</td>
+                    <td>{{ booking[2] }}</td>
+                    <td>{{ booking[3] }}</td>
+                    <td>{{ booking[4] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+    {% else %}
+        <p>No Bookings yet!</p>
+
+    {% endif %}
 {% endblock %}

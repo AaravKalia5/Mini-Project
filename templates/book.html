@@ -5,5 +5,56 @@
 {% endblock %}
 
 {% block main %}
-    <input type="radio">
+    <h2>Select a Tutor and Meeting Details</h2>
+    <form method="POST" class="form">
+        <div class="form_group">
+            <div class="form_label">Tutor: </div>
+            <div class="form_element">
+                <label>
+                    <select name="tutor_name" required>
+                        <option value="">Select a Tutor</option>
+                        {% for tutor in tutors %}
+                            <option value="{{ tutor[0] }} {{ tutor[1] }}">{{ tutor[0]}} {{tutor[1] }}</option>
+                        {% endfor %}
+                    </select>
+                </label>
+            </div>
+        </div>
+
+        <div class="form_group">
+            <div class="form_label">Subject: </div>
+            <div class="form_element">
+                <label>
+                    <input type="text" name="subject" required placeholder="Enter the subject">
+                </label>
+            </div>
+        </div>
+
+        <div class="form_group">
+            <div class="form_label">Location: </div>
+            <div class="form_element">
+                <label>
+                    <input type="text" name="location" required placeholder="Enter the location">
+                </label>
+            </div>
+        </div>
+
+        <div class="form_group">
+            <div class="form_label">Time: </div>
+            <div class="form_element">
+                <label>
+                    <input type="time" name="time" required placeholder="Enter the time">
+                </label>
+            </div>
+        </div>
+
+        <div class="form_group">
+            <div class="form_label">Submit: </div>
+            <div class="form_element">
+                <label>
+                    <input type="submit" value="Done">
+                </label>
+            </div>
+        </div>
+    </form>
 {% endblock %}
